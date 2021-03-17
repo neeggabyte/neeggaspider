@@ -4,8 +4,8 @@ from telegram.ext import Updater, CommandHandler
 
 
 class Bot:
-    def __init__(self):
-        self.token = ''  # Here's the Telegram API
+    def __init__(self, token):
+        self.token = token  # Here's the Telegram API
         self.bot = telegram.Bot(token=self.token)
         self.updater = Updater(token=self.token, use_context=True)
         self.dispatcher = self.updater.dispatcher
